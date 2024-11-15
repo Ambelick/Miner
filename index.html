@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Producción Automatizada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Línea de Producción Automatizada</h1>
+        
+        <div class="workspace">
+            <!-- Área de figuras arrastrables -->
+            <div class="figures">
+                <div class="figure square" draggable="true" id="square">
+                    ◼️
+                </div>
+                <div class="figure circle" draggable="true" id="circle">
+                    ⚫
+                </div>
+                <div class="figure triangle" draggable="true" id="triangle">
+                    ▲
+                </div>
+            </div>
+
+            <div class="production-area">
+                <div class="conveyor-system">
+                    <!-- Banda transportadora -->
+                    <div class="production-line" id="productionLine">
+                        <div class="conveyor-belt"></div>
+                        
+                        <!-- Indicador de punto de recogida -->
+                        <div class="pickup-point"></div>
+                    </div>
+                    
+                    <!-- Garra mecánica -->
+                    <div class="claw" id="claw">
+                        <div class="claw-base"></div>
+                        <div class="claw-arm"></div>
+                        <div class="claw-grip left"></div>
+                        <div class="claw-grip right"></div>
+                        <div class="figure-holder" id="figureHolder"></div>
+                    </div>
+
+                    <!-- Contenedores de clasificación -->
+                    <div class="classification">
+                        <div id="triangleContainer" class="container-box" data-type="triangle">
+                            <div class="container-title">Triángulos</div>
+                            <div class="container-figure">▲</div>
+                            <div class="counter">
+                                <span id="triangleCount">0</span>
+                            </div>
+                        </div>
+                        <div id="squareContainer" class="container-box" data-type="square">
+                            <div class="container-title">Cuadrados</div>
+                            <div class="container-figure">◼️</div>
+                            <div class="counter">
+                                <span id="squareCount">0</span>
+                            </div>
+                        </div>
+                        <div id="circleContainer" class="container-box" data-type="circle">
+                            <div class="container-title">Círculos</div>
+                            <div class="container-figure">⚫</div>
+                            <div class="counter">
+                                <span id="circleCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
